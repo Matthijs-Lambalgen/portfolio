@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: local('Proxima Nova Bold'), url(../font/ProximaNovaBold.otf) format('opentype');
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  background-color: #212631;
+  font-family: 'Proxima Nova Bold';
+  margin: 0;
+  left: 0;
+  scroll-behavior: smooth;
+  z-index: 1;
+}
+
+h1 {
+  color: #12D7C2;
+}
+
+h2 {
+  color: #FFF
+}
+
+h3 {
+  color: #FFF
+}
+
+.container {
+  position: relative;
+}
+
+/* Progress bar */
+
+.progress_bar {
+  background-color: #12D7C2;
+  height: 5px;
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 3;
+}
+
+/* Header */
+
+.header {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+}
+
+.link{
+  cursor: pointer;
+}
+
+/* Home */
+
+.home {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.home_content {
+  justify-content: center;  
+}
+
+.home_content .home_picture {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: url(../img/mannen.jpg); 
+  background-size: 100%;
+  background-position: center;
+  position: relative;
+  display: flex;  
+}
+
+.home_content h1 {
+  margin-top: 30px;
+  text-align: center; 
+}
+
+.home_content h2 {
+  margin-top: 10px;
+  text-align: center;   
+}
+
+/* About me */
+
+.about_me {
+  margin-top: 300px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 600px 600px;
+  gap: 40px;  
+}
+
+.about_me_picture {
+  margin: auto 0 auto auto;
+  width: 600px;
+  height: 400px;
+  border-radius: 15px 15px 15px 15px;
+  background-image: url(../img/team.jpg); 
+  background-size: 110%;
+  background-position: center;
+  position: relative;
+  display: flex;   
+}
+
+.about_me_content {
+  margin-right: 30px;
+} 
+
+.about_me_text {
+  margin-top: 10px;
+} 
+
+/* Projects */
+
+.projects_text {
+  margin-top: 10px;  
+}
+
+.projects {
+  margin-top: 300px;
+  display: grid;
+  gap: 40px;
+  justify-content: center;  
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 200px auto auto auto;
+  grid-template-areas:
+  'a b'
+  'c b' 
+  'c d' 
+  'e d'  
+  ;
+}
+
+.projects_content {
+  margin-right: 30px;
+  grid-area: a;
+} 
+
+.project_container {
+  grid-area: b;
+}
+
+.project_container1 {
+  grid-area: c;  
+}
+
+.project_container2 {
+  grid-area: d;
+  margin-bottom: 100px;  
+}
+
+.upper {
+  border-radius: 15px 15px 0px 0px;
+  height: 400px;
+  width: 600px;
+  background-image: url(../img/sah.png);
+  background-size: 140%;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+.upper::before {
+  content: '';
+  background: #2B3243;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.upper1 {
+  border-radius: 15px 15px 0px 0px;
+  height: 400px;
+  width: 600px;
+  background-image: url(../img/jan.png);
+  background-size: 140%;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+.upper1::before {
+  content: '';
+  background: #2B3243;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.upper2 {
+  border-radius: 15px 15px 0px 0px;
+  height: 400px;
+  width: 600px;
+  background-image: url(../img/port.png);
+  background-size: 140%;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+.upper2::before {
+  content: '';
+  background: #2B3243;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.lower {
+  background-color: #2B3243;
+  border-radius: 0px 0px 15px 15px;
+  height: 200px;
+  width: 600px;
+}
+
+.lower .titel {
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
+  background-color: #2B3243;
+}
+
+.lower .text {
+  word-spacing: 2px;
+  line-height: 25px;
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 20px;
+  background-color: #2B3243;
+}
+
+/* Footer */
