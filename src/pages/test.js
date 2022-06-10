@@ -67,7 +67,10 @@ function Test() {
             <h1>About me</h1>
             <h2 className='about_me_text'>My name is Matthijs van Lambalgen. 22 years old and from the Netherlands. I am someone who works best in a group. I have a lot of passion for my field and am therefore always curious to learn new things. My goal is to eventually start working somewhere as a product owner and hope to be able to specialize more in this over time.</h2>
           </div>
-          <div className='about_me_picture'></div>
+          <div className='skills_content'>
+            <h1>Skills</h1>
+            <h2 className='skills_text'>My name is Matthijs van Lambalgen. 22 years old and from the Netherlands. I am someone who works best in a group. I have a lot of passion for my field and am therefore always curious to learn new things. My goal is to eventually start working somewhere as a product owner and hope to be able to specialize more in this over time.</h2>
+          </div>
         </div>
         <div ref={projects} className='projects'>
           <div className='projects_content'>
