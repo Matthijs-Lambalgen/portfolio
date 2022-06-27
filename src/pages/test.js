@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import '../assets/css/test.css';
+import Popup from '../components/Popup';
+import Popup1 from '../components/Popup1';
 
 function Test() {
 
@@ -38,6 +40,11 @@ function Test() {
     });
   };
 
+  /* Popup */
+
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [buttonPopup1, setButtonPopup1] = useState(false);
+
   return (
     <div>
       <div className='progress_bar' style={{width: `${scrollTop}%`}}></div>
@@ -67,10 +74,7 @@ function Test() {
             <h1>About me</h1>
             <h2 className='about_me_text'>My name is Matthijs van Lambalgen. 22 years old and from the Netherlands. I am someone who works best in a group. I have a lot of passion for my field and am therefore always curious to learn new things. My goal is to eventually start working somewhere as a product owner and hope to be able to specialize more in this over time.</h2>
           </div>
-          <div className='skills_content'>
-            <h1>Skills</h1>
-            <h2 className='skills_text'>My name is Matthijs van Lambalgen. 22 years old and from the Netherlands. I am someone who works best in a group. I have a lot of passion for my field and am therefore always curious to learn new things. My goal is to eventually start working somewhere as a product owner and hope to be able to specialize more in this over time.</h2>
-          </div>
+          <div className='about_me_image'></div>
         </div>
         <div ref={projects} className='projects'>
           <div className='projects_content'>
@@ -82,6 +86,7 @@ function Test() {
             <div className='lower'>
               <h2 className='titel'>Student aan huis</h2>
               <h3 className='text'>This is a dashboard that we have built for Student aan huis. We built this project using React and DynamoDB. In this project I worked on the front end and I was the scrum master.</h3>
+              <h4 className='more' onClick={() => setButtonPopup1(true)}>Read more</h4>
             </div>
           </div>
           <div className='project_container1'>
@@ -89,6 +94,7 @@ function Test() {
             <div className='lower'>
               <h2 className='titel'>Jan de kapper</h2>
               <h3 className='text'>In this project we worked for a fictional hairdresser who wanted a website and dashboard. We built this in React. In this project I worked on the back end and I was the scrum master.</h3>
+              <h4 className='more' onClick={() => setButtonPopup(true)}>Read more</h4>
             </div>
           </div> 
           <div className='project_container2'>
@@ -96,12 +102,12 @@ function Test() {
             <div className='lower'>
               <h2 className='titel'>Portfolio</h2>
               <h3 className='text'>This is my portfolio website. I built this website in React.</h3>
+              <h4 className='more'>Read more</h4>
             </div>
           </div> 
         </div>
-        <div className='footer'>
-
-        </div>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}></Popup>
+        <Popup1 trigger={buttonPopup1} setTrigger={setButtonPopup1}></Popup1>
       </div>
     </div>
   );
